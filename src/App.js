@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
+import "rsuite/dist/rsuite.min.css";
+import { Carousel1 } from './components/Carousel';
+import { Footer1 } from './components/Footer';
+import { Locatii } from './components/Locatii';
+import { Meniuri1 } from './components/Meniuri';
+import { Navbar1 } from './components/Navbar';
+
+
 
 function App() {
+
+  const [body, setBody] = useState('acasa');
+
+  function changeBody(e) {
+    console.log(e)
+    setBody(e)
+  }
+  console.log({ body })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+      <Navbar1 changeBody={changeBody} />
+      {body === 'acasa' && <><Carousel1 />  <Footer1 /></>
+      }
+      {body === 'meniuri' && <> <Meniuri1 /></>
+      }
+      {body === 'locatii' && <><Locatii /></>
+      }
+
+    </div >
+  )
 }
 
 export default App;
