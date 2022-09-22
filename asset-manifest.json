@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rosca/static/css/main.9b43401e.css",
+    "main.js": "/rosca/static/js/main.4c5d046c.js",
+    "index.html": "/rosca/index.html",
+    "main.9b43401e.css.map": "/rosca/static/css/main.9b43401e.css.map",
+    "main.4c5d046c.js.map": "/rosca/static/js/main.4c5d046c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b43401e.css",
+    "static/js/main.4c5d046c.js"
+  ]
+}
